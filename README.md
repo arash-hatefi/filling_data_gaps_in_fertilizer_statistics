@@ -10,5 +10,5 @@ Here, a simplified version of the original dataset is used, nevertheless, the sa
 
 ## Running the code
  - Use the python script ```data.py``` (in the ```data``` directory) written by Rasmus Einarsson to generate a simplified English version of the dataset.
- - Follow the instructions in the Matlab LiveScript for changing the parameters (optional)
+ - Follow the instructions in the Matlab LiveScript ```livescript.xml``` (or equaly ```matlab_code.m```) for changing the parameters (optional)
  - Run the entire LiveScript
