@@ -1,0 +1,13 @@
+"Tillförsel av kväve efter region, grödgrupp, gödselslag, tabellinnehåll och år, brutna"
+
+"region","grödgrupp","gödselslag","Areal, hektar 2012/2013","Tillförd mängd kväve från handelsgödsel, kg per hektar 2012/2013"
+"00 Riket","samtliga åkergrödor","enbart handelsgödsel",968200,108
+"00 Riket","samtliga åkergrödor","både handels- och stallgödsel",544900,93
+"00 Riket","spannmål","enbart handelsgödsel",640100,109
+"00 Riket","spannmål","både handels- och stallgödsel",203100,76
+"00 Riket","slåttervall","enbart handelsgödsel",142200,95
+"00 Riket","slåttervall","både handels- och stallgödsel",266800,107
+"00 Riket","betesvall","enbart handelsgödsel",28300,60
+"00 Riket","betesvall","både handels- och stallgödsel",5900,55
+"00 Riket","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",157500,124
+"00 Riket","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",69100,93

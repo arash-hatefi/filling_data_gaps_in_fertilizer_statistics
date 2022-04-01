@@ -1,0 +1,43 @@
+"Kväve, ton, från handelsgödsel efter region, grödgrupp och år, brutna"
+
+"region","grödgrupp","2012/2013"
+"PO1 Götalands södra slättbygder","samtliga åkergrödor",35510
+"PO1 Götalands södra slättbygder","spannmål",21080
+"PO1 Götalands södra slättbygder","slåttervall",3650
+"PO1 Götalands södra slättbygder","betesvall",230
+"PO1 Götalands södra slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall",10550
+"PO2 Götalands mellanbygder","samtliga åkergrödor",24090
+"PO2 Götalands mellanbygder","spannmål",10310
+"PO2 Götalands mellanbygder","slåttervall",7730
+"PO2 Götalands mellanbygder","betesvall",310
+"PO2 Götalands mellanbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall",5740
+"PO3 Götalands norra slättbygder","samtliga åkergrödor",32470
+"PO3 Götalands norra slättbygder","spannmål",23140
+"PO3 Götalands norra slättbygder","slåttervall",5050
+"PO3 Götalands norra slättbygder","betesvall",240
+"PO3 Götalands norra slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall",4030
+"PO4 Svealands slättbygder","samtliga åkergrödor",30660
+"PO4 Svealands slättbygder","spannmål",21500
+"PO4 Svealands slättbygder","slåttervall",4820
+"PO4 Svealands slättbygder","betesvall",290
+"PO4 Svealands slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall",4050
+"PO5 Götalands skogsbygder","samtliga åkergrödor",20210
+"PO5 Götalands skogsbygder","spannmål",5630
+"PO5 Götalands skogsbygder","slåttervall",12880
+"PO5 Götalands skogsbygder","betesvall",620
+"PO5 Götalands skogsbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall",1080
+"PO6 Mellersta Sveriges skogsbygder","samtliga åkergrödor",5510
+"PO6 Mellersta Sveriges skogsbygder","spannmål",2370
+"PO6 Mellersta Sveriges skogsbygder","slåttervall",2600
+"PO6 Mellersta Sveriges skogsbygder","betesvall",..
+"PO6 Mellersta Sveriges skogsbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall",..
+"PO7 Nedre Norrland","samtliga åkergrödor",3250
+"PO7 Nedre Norrland","spannmål",550
+"PO7 Nedre Norrland","slåttervall",2410
+"PO7 Nedre Norrland","betesvall",..
+"PO7 Nedre Norrland","samtliga åkergrödor utom spannmål och slåtter- och betesvall",..
+"PO8 Övre Norrland","samtliga åkergrödor",3620
+"PO8 Övre Norrland","spannmål",660
+"PO8 Övre Norrland","slåttervall",2860
+"PO8 Övre Norrland","betesvall",..
+"PO8 Övre Norrland","samtliga åkergrödor utom spannmål och slåtter- och betesvall",..

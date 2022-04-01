@@ -1,0 +1,83 @@
+"Tillförsel av kväve efter region, grödgrupp, gödselslag, tabellinnehåll och år, brutna"
+
+"region","grödgrupp","gödselslag","Areal, hektar 2012/2013","Tillförd mängd kväve från handelsgödsel, kg per hektar 2012/2013"
+"PO1 Götalands södra slättbygder","samtliga åkergrödor","enbart handelsgödsel",211600,134
+"PO1 Götalands södra slättbygder","samtliga åkergrödor","både handels- och stallgödsel",66800,107
+"PO1 Götalands södra slättbygder","spannmål","enbart handelsgödsel",137200,133
+"PO1 Götalands södra slättbygder","spannmål","både handels- och stallgödsel",32300,90
+"PO1 Götalands södra slättbygder","slåttervall","enbart handelsgödsel",9800,124
+"PO1 Götalands södra slättbygder","slåttervall","både handels- och stallgödsel",16600,147
+"PO1 Götalands södra slättbygder","betesvall","enbart handelsgödsel",2900,..
+"PO1 Götalands södra slättbygder","betesvall","både handels- och stallgödsel",900,..
+"PO1 Götalands södra slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",61800,142
+"PO1 Götalands södra slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",17100,104
+"PO2 Götalands mellanbygder","samtliga åkergrödor","enbart handelsgödsel",113800,109
+"PO2 Götalands mellanbygder","samtliga åkergrödor","både handels- och stallgödsel",122900,95
+"PO2 Götalands mellanbygder","spannmål","enbart handelsgödsel",68300,108
+"PO2 Götalands mellanbygder","spannmål","både handels- och stallgödsel",36500,81
+"PO2 Götalands mellanbygder","slåttervall","enbart handelsgödsel",18600,106
+"PO2 Götalands mellanbygder","slåttervall","både handels- och stallgödsel",55000,105
+"PO2 Götalands mellanbygder","betesvall","enbart handelsgödsel",4000,64
+"PO2 Götalands mellanbygder","betesvall","både handels- och stallgödsel",800,..
+"PO2 Götalands mellanbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",22900,124
+"PO2 Götalands mellanbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",30600,94
+"PO3 Götalands norra slättbygder","samtliga åkergrödor","enbart handelsgödsel",217800,116
+"PO3 Götalands norra slättbygder","samtliga åkergrödor","både handels- och stallgödsel",75100,97
+"PO3 Götalands norra slättbygder","spannmål","enbart handelsgödsel",169700,116
+"PO3 Götalands norra slättbygder","spannmål","både handels- och stallgödsel",43500,79
+"PO3 Götalands norra slättbygder","slåttervall","enbart handelsgödsel",17000,111
+"PO3 Götalands norra slättbygder","slåttervall","både handels- och stallgödsel",24200,130
+"PO3 Götalands norra slättbygder","betesvall","enbart handelsgödsel",3300,66
+"PO3 Götalands norra slättbygder","betesvall","både handels- och stallgödsel",500,..
+"PO3 Götalands norra slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",27800,121
+"PO3 Götalands norra slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",6900,96
+"PO4 Svealands slättbygder","samtliga åkergrödor","enbart handelsgödsel",266600,95
+"PO4 Svealands slättbygder","samtliga åkergrödor","både handels- och stallgödsel",62200,85
+"PO4 Svealands slättbygder","spannmål","enbart handelsgödsel",194800,96
+"PO4 Svealands slättbygder","spannmål","både handels- och stallgödsel",37800,76
+"PO4 Svealands slättbygder","slåttervall","enbart handelsgödsel",34000,88
+"PO4 Svealands slättbygder","slåttervall","både handels- och stallgödsel",18300,100
+"PO4 Svealands slättbygder","betesvall","enbart handelsgödsel",4200,64
+"PO4 Svealands slättbygder","betesvall","både handels- och stallgödsel",400,..
+"PO4 Svealands slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",33500,105
+"PO4 Svealands slättbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",5700,90
+"PO5 Götalands skogsbygder","samtliga åkergrödor","enbart handelsgödsel",80400,90
+"PO5 Götalands skogsbygder","samtliga åkergrödor","både handels- och stallgödsel",140200,93
+"PO5 Götalands skogsbygder","spannmål","enbart handelsgödsel",41400,90
+"PO5 Götalands skogsbygder","spannmål","både handels- och stallgödsel",30700,63
+"PO5 Götalands skogsbygder","slåttervall","enbart handelsgödsel",24500,100
+"PO5 Götalands skogsbygder","slåttervall","både handels- och stallgödsel",100000,104
+"PO5 Götalands skogsbygder","betesvall","enbart handelsgödsel",8900,55
+"PO5 Götalands skogsbygder","betesvall","både handels- och stallgödsel",2500,..
+"PO5 Götalands skogsbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",5600,106
+"PO5 Götalands skogsbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",7000,68
+"PO6 Mellersta Sveriges skogsbygder","samtliga åkergrödor","enbart handelsgödsel",38900,82
+"PO6 Mellersta Sveriges skogsbygder","samtliga åkergrödor","både handels- och stallgödsel",28200,82
+"PO6 Mellersta Sveriges skogsbygder","spannmål","enbart handelsgödsel",17300,83
+"PO6 Mellersta Sveriges skogsbygder","spannmål","både handels- och stallgödsel",13300,70
+"PO6 Mellersta Sveriges skogsbygder","slåttervall","enbart handelsgödsel",16000,82
+"PO6 Mellersta Sveriges skogsbygder","slåttervall","både handels- och stallgödsel",13600,..
+"PO6 Mellersta Sveriges skogsbygder","betesvall","enbart handelsgödsel",2100,..
+"PO6 Mellersta Sveriges skogsbygder","betesvall","både handels- och stallgödsel",200,..
+"PO6 Mellersta Sveriges skogsbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",3500,..
+"PO6 Mellersta Sveriges skogsbygder","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",1100,..
+"PO7 Nedre Norrland","samtliga åkergrödor","enbart handelsgödsel",18700,69
+"PO7 Nedre Norrland","samtliga åkergrödor","både handels- och stallgödsel",22300,88
+"PO7 Nedre Norrland","spannmål","enbart handelsgödsel",5000,..
+"PO7 Nedre Norrland","spannmål","både handels- och stallgödsel",4700,..
+"PO7 Nedre Norrland","slåttervall","enbart handelsgödsel",10200,..
+"PO7 Nedre Norrland","slåttervall","både handels- och stallgödsel",17100,..
+"PO7 Nedre Norrland","betesvall","enbart handelsgödsel",2000,..
+"PO7 Nedre Norrland","betesvall","både handels- och stallgödsel",200,..
+"PO7 Nedre Norrland","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",1500,..
+"PO7 Nedre Norrland","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",400,..
+"PO8 Övre Norrland","samtliga åkergrödor","enbart handelsgödsel",20600,75
+"PO8 Övre Norrland","samtliga åkergrödor","både handels- och stallgödsel",27100,77
+"PO8 Övre Norrland","spannmål","enbart handelsgödsel",6500,..
+"PO8 Övre Norrland","spannmål","både handels- och stallgödsel",4300,..
+"PO8 Övre Norrland","slåttervall","enbart handelsgödsel",12200,..
+"PO8 Övre Norrland","slåttervall","både handels- och stallgödsel",22000,83
+"PO8 Övre Norrland","betesvall","enbart handelsgödsel",1100,..
+"PO8 Övre Norrland","betesvall","både handels- och stallgödsel",500,..
+"PO8 Övre Norrland","samtliga åkergrödor utom spannmål och slåtter- och betesvall","enbart handelsgödsel",800,..
+"PO8 Övre Norrland","samtliga åkergrödor utom spannmål och slåtter- och betesvall","både handels- och stallgödsel",400,..

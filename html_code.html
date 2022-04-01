@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2020a"><title>Untitled</title><style type="text/css">.rtcContent { padding: 30px; } .CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S0 { border-left: 0.989583px solid rgb(233, 233, 233); border-right: 0.989583px solid rgb(233, 233, 233); border-top: 0.989583px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 0.989583px solid rgb(233, 233, 233); border-right: 0.989583px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 0.989583px solid rgb(233, 233, 233); border-right: 0.989583px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0.989583px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S3 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.S4 { border-left: 0.989583px solid rgb(233, 233, 233); border-right: 0.989583px solid rgb(233, 233, 233); border-top: 0.989583px solid rgb(233, 233, 233); border-bottom: 0.989583px solid rgb(233, 233, 233); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>clear;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>clc;</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>close </span><span style="color: rgb(160, 32, 240);">all</span><span>;</span></span></div></div></div><h2  class = 'S3'><span style=' font-weight: bold;'>Step 1: Importing the Data</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>A_RCS_PATH = </span><span style="color: rgb(160, 32, 240);">"./data/aRCS.csv"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>M_RCS_PATH = </span><span style="color: rgb(160, 32, 240);">"./data/mRCS.csv"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>M_RC_PATH = </span><span style="color: rgb(160, 32, 240);">"./data/mRC.csv"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>M_CS_PATH = </span><span style="color: rgb(160, 32, 240);">"./data/mCS.csv"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>M_C_PATH = </span><span style="color: rgb(160, 32, 240);">"./data/mC.csv"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>M_R_PATH = </span><span style="color: rgb(160, 32, 240);">"./data/mR.csv"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>aRCS_table = readtable(A_RCS_PATH);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mRCS_table = readtable(M_RCS_PATH);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mRC_table = readtable(M_RC_PATH);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mCS_table = readtable(M_CS_PATH);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mC_table = readtable(M_C_PATH);</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>mR_table = readtable(M_R_PATH);</span></span></div></div></div><h2  class = 'S3'><span>Step 2: Estimating the Value of m (Total Amount of Fertilizer)</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>mRCS_table_sum_m = sum(mRCS_table.m);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mRC_table_sum_m = sum(mRC_table.m);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mCS_table_sum_m = sum(mCS_table.m);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mC_table_sum_m = sum(mC_table.m);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>mR_table_sum_m = sum(mR_table.m);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>estimated_m = nanmean([mRCS_table_sum_m, mRC_table_sum_m, mCS_table_sum_m, mC_table_sum_m, mR_table_sum_m]);</span></span></div></div></div><h2  class = 'S3'><span>Step 3: Setting Up the Constraint Equations</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>X = sym(</span><span style="color: rgb(160, 32, 240);">'x'</span><span>, [height(aRCS_table),1]);</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>mRCS_table.p = mRCS_table.m/estimated_m;</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>mRCS_table.equation = X;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>mRC_table.p = mRC_table.m/estimated_m;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>simbolic_values = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>row_idx=1:height(mRC_table)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    region = mRC_table.region(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    crop = mRC_table.crop(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    table = mRCS_table(strcmp(mRCS_table.region, region) &amp; strcmp(mRCS_table.crop, crop), :);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte1311815280">simbolic_values</span><span> = [simbolic_values; sum(table.equation)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>mRC_table.equation = simbolic_values;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>mCS_table.p = mCS_table.m/estimated_m;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>simbolic_values = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>row_idx=1:height(mCS_table)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    strategy = mCS_table.strategy(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    crop = mCS_table.crop(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    table = mRCS_table(strcmp(mRCS_table.strategy, strategy) &amp; strcmp(mRCS_table.crop, crop), :);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte1311815280">simbolic_values</span><span> = [simbolic_values; sum(table.equation)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>mCS_table.equation = simbolic_values;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>mC_table.p = mC_table.m/estimated_m;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>simbolic_values = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>row_idx=1:height(mC_table)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    crop = mC_table.crop(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    table = mRCS_table(strcmp(mRCS_table.crop, crop), :);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte1311815280">simbolic_values</span><span> = [simbolic_values; sum(table.equation)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>mC_table.equation = simbolic_values;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>mR_table.p = mR_table.m/estimated_m;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>simbolic_values = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>row_idx=1:height(mR_table)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    region = mR_table.region(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    table = mRCS_table(strcmp(mRCS_table.region, region), :);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte1311815280">simbolic_values</span><span> = [simbolic_values; sum(table.equation)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>mR_table.equation = simbolic_values;</span></span></div></div></div><h2  class = 'S3'><span>Step 4: Setting Up the Lagrange Formulation</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Parameters</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>ESTIMATION_METHOD = </span><span style="color: rgb(160, 32, 240);">"MinCrossEntropy"</span><span>;  </span><span style="color: rgb(60, 118, 61);">% Either "MinCrossEntropy" or "MaxEntropy"</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>CONSTRAINTS = </span><span style="color: rgb(160, 32, 240);">"C2"</span><span>; </span><span style="color: rgb(60, 118, 61);">% Either "C1" or "C2" or "C3" or "C4" (For more info please see the report)</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>PRIOR_DIST = </span><span style="color: rgb(160, 32, 240);">"Uniform"</span><span>;</span><span style="color: rgb(60, 118, 61);">%"ProportionalToHarvest"  % Either "Uniform" or "ProportionalToHarvest"</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">switch </span><span>CONSTRAINTS</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span style="color: rgb(160, 32, 240);">"C1"</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        equations = [mC_table.equation; mR_table.equation];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        p_values = [mC_table.p; mR_table.p];  </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span style="color: rgb(160, 32, 240);">"C2"</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        equations = [mRC_table.equation; mCS_table.equation];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        p_values = [mRC_table.p; mCS_table.p];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span style="color: rgb(160, 32, 240);">"C3"</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        equations = [mRC_table.equation; mCS_table.equation; mC_table.equation; mR_table.equation];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        p_values = [mRC_table.p; mCS_table.p; mC_table.p; mR_table.p];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span style="color: rgb(160, 32, 240);">"C4"</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        equations = [mRC_table.equation; mCS_table.equation; mC_table.equation; mR_table.equation;mRCS_table.equation];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        p_values = [mRC_table.p; mCS_table.p; mC_table.p; mR_table.p;mRCS_table.p];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">otherwise</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        assert(true, </span><span style="color: rgb(160, 32, 240);">"Invalied CONSTRAINTS"</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>constraints = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>row_idx=1:length(p_values)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    equation = equations(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    p = p_values(row_idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">if </span><span>~isnan(p)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>        </span><span class="warning_squiggle_rte1311815280">constraints</span><span> = [constraints; (equation-p)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>constraints = [constraints; sum(mRCS_table.equation)-1];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>contraint_coeffs = sym(</span><span style="color: rgb(160, 32, 240);">'lambda'</span><span>, [length(constraints),1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>contraints_term = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:length(constraints)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     contraints_term = contraints_term + constraints(i)*contraint_coeffs(i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>(PRIOR_DIST==</span><span style="color: rgb(160, 32, 240);">"Uniform"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    prior_dist = ones(height(mRCS_table),1)/height(mRCS_table);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">elseif </span><span>(PRIOR_DIST==</span><span style="color: rgb(160, 32, 240);">"ProportionalToHarvest"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    prior_dist = aRCS_table.a;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    prior_dist = prior_dist / sum(prior_dist);   </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    assert(true, </span><span style="color: rgb(160, 32, 240);">"Invalied PRIOR_DIST"</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>(ESTIMATION_METHOD==</span><span style="color: rgb(160, 32, 240);">"MaxEntropy"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    entropy_term = -sum(mRCS_table.equation.*log(mRCS_table.equation));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    main_term = entropy_term;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">elseif </span><span>(ESTIMATION_METHOD==</span><span style="color: rgb(160, 32, 240);">"MinCrossEntropy"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    kl_divergence_term = (-sum(mRCS_table.equation.*log(prior_dist./mRCS_table.equation)));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    main_term = -kl_divergence_term;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    assert(true, </span><span style="color: rgb(160, 32, 240);">"Invalied STIMATION_METHOD"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>lagrangean = main_term + contraints_term;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>all_variables = [X; contraint_coeffs];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>lagrangean_diffs = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:length(all_variables)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte1311815280">lagrangean_diffs</span><span> = [lagrangean_diffs; diff(lagrangean, all_variables(i))];</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>inputs = sym(</span><span style="color: rgb(160, 32, 240);">'input'</span><span>, [length(all_variables),1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>inputs_array = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:length(all_variables)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte1311815280">inputs_array</span><span> = [inputs_array; inputs(i)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>lagrangean_diffs_func = subs(lagrangean_diffs,all_variables,inputs_array);</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>lagrangean_diffs_func = matlabFunction(lagrangean_diffs_func,</span><span style="color: rgb(160, 32, 240);">'vars'</span><span>,{inputs});</span></span></div></div></div><h2  class = 'S3'><span>Step 5: Setting the Optimizer Parameters</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>lambda_min_value = -1000;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>lambda_max_value = 1000;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>lambda_init_value = 4;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>lb = [zeros(length(prior_dist),1);ones(length(contraint_coeffs),1)*lambda_min_value];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>ub = [ones(length(prior_dist),1);ones(length(contraint_coeffs),1)*lambda_max_value];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>init_value = [prior_dist;ones(length(contraint_coeffs),1)*lambda_init_value];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>options = optimoptions(</span><span style="color: rgb(160, 32, 240);">'lsqnonlin'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>options.MaxFunctionEvaluations = 900000;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>options.MaxIterations = 90000;</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>options.Display = </span><span style="color: rgb(160, 32, 240);">'iter'</span><span>;</span></span></div></div></div><h2  class = 'S3'><span>Step 6: Solving the Optimization Problem</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>results = lsqnonlin(lagrangean_diffs_func,init_value,lb,ub);</span></span></div></div></div><h2  class = 'S3'><span>Step 7: Post Process Results</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>predicted_probabilities = results(1:length(X));</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>predicted_m_values = predicted_probabilities .* estimated_m;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>rss = nanmean((predicted_probabilities-mRCS_table.p).^2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>tss = nanvar(mRCS_table.p);</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>r_squared = 1 - rss/tss;</span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span>hold </span><span style="color: rgb(160, 32, 240);">off</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>scatter(mRCS_table.p, predicted_probabilities);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>hold </span><span style="color: rgb(160, 32, 240);">on</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>limit = max([predicted_probabilities;mRCS_table.p]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>plot([0,limit*1.1],[0,limit*1.1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>xlabel(</span><span style="color: rgb(160, 32, 240);">"Avalilabe Probabilities in Table"</span><span>,</span><span style="color: rgb(160, 32, 240);">'FontSize'</span><span>,14);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>ylabel(</span><span style="color: rgb(160, 32, 240);">"Predicted Probabilities"</span><span>,</span><span style="color: rgb(160, 32, 240);">'FontSize'</span><span>,14);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>text(limit*0.1,limit*0.95,</span><span style="color: rgb(160, 32, 240);">"r^2="</span><span>+string(r_squared),</span><span style="color: rgb(160, 32, 240);">'FontSize'</span><span>,14);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>grid </span><span style="color: rgb(160, 32, 240);">on</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span>axis </span><span style="color: rgb(160, 32, 240);">square</span><span>;</span></span></div></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+clear;
+clc;
+close all;
+%% *Step 1: Importing the Data*
+
+A_RCS_PATH = "./data/aRCS.csv";
+M_RCS_PATH = "./data/mRCS.csv";
+M_RC_PATH = "./data/mRC.csv";
+M_CS_PATH = "./data/mCS.csv";
+M_C_PATH = "./data/mC.csv";
+M_R_PATH = "./data/mR.csv";
+
+aRCS_table = readtable(A_RCS_PATH);
+mRCS_table = readtable(M_RCS_PATH);
+mRC_table = readtable(M_RC_PATH);
+mCS_table = readtable(M_CS_PATH);
+mC_table = readtable(M_C_PATH);
+mR_table = readtable(M_R_PATH);
+%% Step 2: Estimating the Value of m (Total Amount of Fertilizer)
+
+mRCS_table_sum_m = sum(mRCS_table.m);
+mRC_table_sum_m = sum(mRC_table.m);
+mCS_table_sum_m = sum(mCS_table.m);
+mC_table_sum_m = sum(mC_table.m);
+mR_table_sum_m = sum(mR_table.m);
+
+estimated_m = nanmean([mRCS_table_sum_m, mRC_table_sum_m, mCS_table_sum_m, mC_table_sum_m, mR_table_sum_m]);
+%% Step 3: Setting Up the Constraint Equations
+
+X = sym('x', [height(aRCS_table),1]);
+%%
+mRCS_table.p = mRCS_table.m/estimated_m;
+mRCS_table.equation = X;
+%%
+mRC_table.p = mRC_table.m/estimated_m;
+simbolic_values = [];
+
+for row_idx=1:height(mRC_table)
+    region = mRC_table.region(row_idx);
+    crop = mRC_table.crop(row_idx);
+    table = mRCS_table(strcmp(mRCS_table.region, region) & strcmp(mRCS_table.crop, crop), :);
+    simbolic_values = [simbolic_values; sum(table.equation)];
+end
+
+mRC_table.equation = simbolic_values;
+%%
+mCS_table.p = mCS_table.m/estimated_m;
+simbolic_values = [];
+
+for row_idx=1:height(mCS_table)
+    strategy = mCS_table.strategy(row_idx);
+    crop = mCS_table.crop(row_idx);
+    table = mRCS_table(strcmp(mRCS_table.strategy, strategy) & strcmp(mRCS_table.crop, crop), :);
+    simbolic_values = [simbolic_values; sum(table.equation)];
+end
+
+mCS_table.equation = simbolic_values;
+%%
+mC_table.p = mC_table.m/estimated_m;
+simbolic_values = [];
+
+for row_idx=1:height(mC_table)
+    crop = mC_table.crop(row_idx);
+    table = mRCS_table(strcmp(mRCS_table.crop, crop), :);
+    simbolic_values = [simbolic_values; sum(table.equation)];
+end
+
+mC_table.equation = simbolic_values;
+%%
+mR_table.p = mR_table.m/estimated_m;
+simbolic_values = [];
+
+for row_idx=1:height(mR_table)
+    region = mR_table.region(row_idx);
+    table = mRCS_table(strcmp(mRCS_table.region, region), :);
+    simbolic_values = [simbolic_values; sum(table.equation)];
+end
+
+mR_table.equation = simbolic_values;
+%% Step 4: Setting Up the Lagrange Formulation
+
+% Parameters
+ESTIMATION_METHOD = "MinCrossEntropy";  % Either "MinCrossEntropy" or "MaxEntropy"
+CONSTRAINTS = "C2"; % Either "C1" or "C2" or "C3" or "C4" (For more info please see the report)
+PRIOR_DIST = "Uniform";%"ProportionalToHarvest"  % Either "Uniform" or "ProportionalToHarvest"
+%%
+switch CONSTRAINTS
+    case "C1"
+        equations = [mC_table.equation; mR_table.equation];
+        p_values = [mC_table.p; mR_table.p];  
+    case "C2"
+        equations = [mRC_table.equation; mCS_table.equation];
+        p_values = [mRC_table.p; mCS_table.p];
+    case "C3"
+        equations = [mRC_table.equation; mCS_table.equation; mC_table.equation; mR_table.equation];
+        p_values = [mRC_table.p; mCS_table.p; mC_table.p; mR_table.p];
+    case "C4"
+        equations = [mRC_table.equation; mCS_table.equation; mC_table.equation; mR_table.equation;mRCS_table.equation];
+        p_values = [mRC_table.p; mCS_table.p; mC_table.p; mR_table.p;mRCS_table.p];
+    otherwise
+        assert(true, "Invalied CONSTRAINTS");
+end
+
+constraints = [];
+
+for row_idx=1:length(p_values)
+    equation = equations(row_idx);
+    p = p_values(row_idx);
+    if ~isnan(p)
+        constraints = [constraints; (equation-p)];
+    end
+end
+constraints = [constraints; sum(mRCS_table.equation)-1];
+
+contraint_coeffs = sym('lambda', [length(constraints),1]);
+contraints_term = 0;
+for i=1:length(constraints)
+     contraints_term = contraints_term + constraints(i)*contraint_coeffs(i);
+end
+%%
+if (PRIOR_DIST=="Uniform")
+    prior_dist = ones(height(mRCS_table),1)/height(mRCS_table);
+elseif (PRIOR_DIST=="ProportionalToHarvest")
+    prior_dist = aRCS_table.a;
+    prior_dist = prior_dist / sum(prior_dist);   
+else
+    assert(true, "Invalied PRIOR_DIST");
+end
+%%
+if (ESTIMATION_METHOD=="MaxEntropy")
+    entropy_term = -sum(mRCS_table.equation.*log(mRCS_table.equation));
+    main_term = entropy_term;
+elseif (ESTIMATION_METHOD=="MinCrossEntropy")
+    kl_divergence_term = (-sum(mRCS_table.equation.*log(prior_dist./mRCS_table.equation)));
+    main_term = -kl_divergence_term;
+else
+    assert(true, "Invalied STIMATION_METHOD")
+end
+%%
+lagrangean = main_term + contraints_term;
+%%
+all_variables = [X; contraint_coeffs];
+
+lagrangean_diffs = [];
+for i=1:length(all_variables)
+    lagrangean_diffs = [lagrangean_diffs; diff(lagrangean, all_variables(i))];
+end
+%%
+inputs = sym('input', [length(all_variables),1]);
+inputs_array = [];
+for i=1:length(all_variables)
+    inputs_array = [inputs_array; inputs(i)];
+end
+%%
+lagrangean_diffs_func = subs(lagrangean_diffs,all_variables,inputs_array);
+lagrangean_diffs_func = matlabFunction(lagrangean_diffs_func,'vars',{inputs});
+%% Step 5: Setting the Optimizer Parameters
+
+lambda_min_value = -1000;
+lambda_max_value = 1000;
+lambda_init_value = 4;
+
+lb = [zeros(length(prior_dist),1);ones(length(contraint_coeffs),1)*lambda_min_value];
+ub = [ones(length(prior_dist),1);ones(length(contraint_coeffs),1)*lambda_max_value];
+init_value = [prior_dist;ones(length(contraint_coeffs),1)*lambda_init_value];
+
+options = optimoptions('lsqnonlin');
+options.MaxFunctionEvaluations = 900000;
+options.MaxIterations = 90000;
+options.Display = 'iter';
+%% Step 6: Solving the Optimization Problem
+
+results = lsqnonlin(lagrangean_diffs_func,init_value,lb,ub);
+%% Step 7: Post Process Results
+
+predicted_probabilities = results(1:length(X));
+predicted_m_values = predicted_probabilities .* estimated_m;
+%%
+rss = nanmean((predicted_probabilities-mRCS_table.p).^2);
+tss = nanvar(mRCS_table.p);
+r_squared = 1 - rss/tss;
+%%
+hold off;
+scatter(mRCS_table.p, predicted_probabilities);
+hold on;
+limit = max([predicted_probabilities;mRCS_table.p]);
+plot([0,limit*1.1],[0,limit*1.1]);
+xlabel("Avalilabe Probabilities in Table",'FontSize',14);
+ylabel("Predicted Probabilities",'FontSize',14);
+text(limit*0.1,limit*0.95,"r^2="+string(r_squared),'FontSize',14);
+grid on;
+axis square;
+##### SOURCE END #####
+--></body></html>
